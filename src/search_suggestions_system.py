@@ -3,7 +3,12 @@ from typing import List
 
 
 # LeetCode link: https://leetcode.com/problems/search-suggestions-system/
-# There are two-way to solve this
+# There are two-way to solve this. We can use Prefix Tree/Tries, or we can use
+# the approach used in this solution, in which we can use two pointers to
+# check how products can be returned.
+# The time complexity is O(n log n) in our sorting algorithm +
+# O(m) in our loop through searchWord characters +
+# O(n) in our loop check which products have the current char.
 def suggested_products(products: List[str], searchWord: str) -> List[List[str]]:
     products.sort()  # O(n log n)
 
